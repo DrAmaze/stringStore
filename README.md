@@ -1,24 +1,18 @@
-# README
+### String Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+Using React Boilerplate, create an application. (Expected to take 6-10 hours). Upon completion, respond to this email with a link to your GitHub fork of the React Boilerplate repo.
 
-Things you may want to cover:
+* One page shall have UI to input a string which saves to a database of your choice.
+* One page shall display all strings stored on the database.
+* User shall be able to navigate between the two pages.
+* The application need not be fully styled but should be laid out in a meaningful way. No need to deploy the application.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Libraries
+The application must leverage:
+* React Router
+* Redux
+* Redux Saga
+* Reselect
+* Styled Components - Use at least one styled component. The component must have a prop passed in for conditional rendering.
+* Unit Tests - Write tests for one container. Full test coverage is not required.
