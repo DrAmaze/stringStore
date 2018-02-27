@@ -33,6 +33,8 @@ class WordForm extends React.Component {
             placeholder='type' />
         </label>
 
+        
+
       </form>
     );
   }

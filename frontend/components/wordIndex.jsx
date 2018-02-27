@@ -27,6 +27,7 @@ class Word extends React.Component {
       words = <Spinner />;
     }
 
+console.log(words)
 
     return(
       <div className='words'>
