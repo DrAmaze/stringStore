@@ -53,3 +53,5 @@ class Word extends React.Component {
   }
 
 }
+
+export default Word;

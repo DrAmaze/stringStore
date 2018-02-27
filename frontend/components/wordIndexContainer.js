@@ -14,15 +14,13 @@ const wordSelector = createSelector(
   state => state.values.words
 );
 
-const mapStateToProps = state => {
-  return {
-    words: wordSelector(state),
-  };
-};
+const mapStateToProps = state => ({
+  words: wordSelector(state),
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchWords: () => dispatch(fetchWords()),
-  fetchWord: word => dispatch(fetchWord(word))
+  fetchWord: word => dispatch(fetchWord(word)),
 });
 
 export default withRouter(connect(
