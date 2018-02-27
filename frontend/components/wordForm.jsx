@@ -35,7 +35,7 @@ class WordForm extends React.Component {
 
         </form>
         <Link to={ `/words` }>
-          Full List
+          Click here to see complete list of strings
         </Link>
       </div>
     );
