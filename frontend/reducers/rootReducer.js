@@ -12,9 +12,9 @@ const wordsReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_WORDS:
-      return merge({}, action.bookings);
+      return merge({}, action.words);
     case RECEIVE_WORD:
-      return merge({}, state, {[action.booking.id]: action.booking});
+      return merge({}, state, {[action.word.id]: action.word});
     // case REMOVE_WORD:
     //   newState = merge({}, state);
     //   delete newState[action.booking.id];

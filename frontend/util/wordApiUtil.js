@@ -1,19 +1,21 @@
+import { ajax } from 'jquery';
+
 export const fetchWords = () => (
-  $.ajax({
+  ajax({
     method: 'GET',
     url: 'api/word'
   })
 );
 
 export const fetchWord = id => (
-  $.ajax({
+  ajax({
     method: 'GET',
     url: `api/word/${id}`
   })
 );
 
 export const createWord = word => (
-  $.ajax({
+  ajax({
     method: 'POST',
     url: 'api/word',
     data: word
@@ -21,7 +23,7 @@ export const createWord = word => (
 );
 
 export const deleteWord = dataId => (
-  $.ajax({
+  ajax({
     method: 'DELETE',
     url: `api/word/${dataId}`
   })

@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 import WordIndex from './wordIndexContainer';
+import WordForm from './wordFormContainer';
 
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
@@ -17,7 +18,8 @@ const ScrollToTop = () => {
 const App = () => (
   <div>
     <Route component={ScrollToTop} />
-    <Route path='/word' component={ WordIndex } />
+    <Route path='/' component={ WordIndex } />
+    <Route path='/new' component={ WordForm } />
   </div>
 );
 

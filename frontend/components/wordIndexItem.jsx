@@ -7,4 +7,4 @@ const WordIndexItem = ({ word }) => (
   </li>
 );
 
-export default withRouter(WordIndexItem);
+export default WordIndexItem;

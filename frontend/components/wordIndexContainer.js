@@ -11,11 +11,11 @@ import { createSelector } from 'reselect';
 import values from 'lodash/values';
 
 const wordSelector = createSelector(
-  state => state.values.words
+  // state => state.values.words
 );
 
 const mapStateToProps = state => ({
-  words: wordSelector(state),
+  // words: wordSelector(state),
 });
 
 const mapDispatchToProps = dispatch => ({

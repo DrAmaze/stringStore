@@ -5,9 +5,6 @@ import WordIndexItem from './wordIndexItem';
 class Word extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      content: '',
-    };
   }
 
   componentDidMount() {
@@ -29,6 +26,7 @@ class Word extends React.Component {
       words = [];
     }
 
+
     return(
       <div className='words'>
         <section className='words-index'>
@@ -36,17 +34,6 @@ class Word extends React.Component {
           <ul>
             { words }
           </ul>
-        </section>
-
-        <section className='new-word'>
-          <h3>Add New Word</h3>
-          <label>
-            Enter String
-            <input
-              type='text'
-              onChange={this.update('content')}
-              placeholder='type' />
-          </label>
         </section>
       </div>
     );
