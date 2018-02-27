@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import WordIndexItem from './wordIndexItem';
+import Spinner from './spinner';
 
 class Word extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Word extends React.Component {
           />
       );
     } else {
-      words = [];
+      words = <Spinner />;
     }
 
 

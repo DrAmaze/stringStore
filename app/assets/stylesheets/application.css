@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ /* CSS Reset */
+@import 'reset.css';
+
+@import 'spinner.css';
