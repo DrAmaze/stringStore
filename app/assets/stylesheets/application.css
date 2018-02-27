@@ -17,4 +17,6 @@
  /* CSS Reset */
 @import 'reset.css';
 
+@import 'words.css';
+@import 'form.css';
 @import 'spinner.css';

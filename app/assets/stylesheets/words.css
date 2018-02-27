@@ -1,0 +1,21 @@
+body {
+  background-image: url('https://images.pexels.com/photos/625219/pexels-photo-625219.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  text-align: center;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  font-family: 'Pangolin', cursive;
+  margin: 20px;
+}
+
+a {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 20px;
+}

@@ -23,19 +23,21 @@ class WordForm extends React.Component {
 
   render() {
     return (
-      <form className='new-word' onSubmit={ this.handleSubmit }>
-        <h3>Add New Word</h3>
-        <label>
-          Enter String
+      <div>
+        <form className='new-word' onSubmit={ this.handleSubmit }>
+          <h2>Add New Word</h2>
           <input
             type='text'
             onChange={this.update('content')}
-            placeholder='type' />
-        </label>
+            placeholder='Enter string here'
+            className='string' />
 
-        
 
-      </form>
+        </form>
+        <Link to={ `/words` }>
+          Full List
+        </Link>
+      </div>
     );
   }
 

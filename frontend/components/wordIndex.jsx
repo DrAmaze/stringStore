@@ -27,16 +27,18 @@ class Word extends React.Component {
       words = <Spinner />;
     }
 
-console.log(words)
-
     return(
       <div className='words'>
         <section className='words-index'>
-          <h1>Complete List of Words</h1>
+          <h2>Complete List of Words</h2>
           <ul>
             { words }
           </ul>
         </section>
+
+        <Link to={ `/new` }>
+          Add a new word
+        </Link>
       </div>
     );
   }

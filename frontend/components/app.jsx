@@ -18,7 +18,7 @@ const ScrollToTop = () => {
 const App = () => (
   <div>
     <Route component={ScrollToTop} />
-    <Route path='/' component={ WordIndex } />
+    <Route path='/words' component={ WordIndex } />
     <Route path='/new' component={ WordForm } />
   </div>
 );
