@@ -38,7 +38,7 @@ export class WordForm extends React.Component {
           <button
             type='submit'
             disabled={ disabled }
-            className='button'>
+            className='submit-button'>
             Submit
           </button>
         </form>
