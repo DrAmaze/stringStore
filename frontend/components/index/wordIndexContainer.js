@@ -6,7 +6,7 @@ import {
   fetchWords,
   fetchWord,
   createWord
-} from '../actions/wordActions';
+} from '../../actions/wordActions';
 import { createSelector } from 'reselect';
 import values from 'lodash/values';
 
@@ -15,7 +15,7 @@ const wordSelector = createSelector(
 );
 
 const mapStateToProps = state => ({
-  // words: wordSelector(state),
+  words: state.words
 });
 
 const mapDispatchToProps = dispatch => ({

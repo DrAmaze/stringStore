@@ -7,8 +7,8 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import WordIndex from './wordIndexContainer';
-import WordForm from './wordFormContainer';
+import WordIndex from './index/wordIndexContainer';
+import WordForm from './form/wordFormContainer';
 
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
@@ -18,6 +18,7 @@ const ScrollToTop = () => {
 const App = () => (
   <div>
     <Route component={ScrollToTop} />
+    <Redirect from='/' to='/words' />
     <Route path='/words' component={ WordIndex } />
     <Route path='/new' component={ WordForm } />
   </div>

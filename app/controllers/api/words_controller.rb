@@ -3,7 +3,7 @@ class Api::WordsController < ApplicationController
     @word = Word.new(word_params)
 
     if @word.save
-      render :index
+      render json: @word
     else
       render json: @word.errors.full_messages, status: 422
     end

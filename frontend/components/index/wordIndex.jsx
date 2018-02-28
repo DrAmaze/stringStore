@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import WordIndexItem from './wordIndexItem';
-import Spinner from './spinner';
+import Spinner from '../loading/spinner';
 
 class Word extends React.Component {
   constructor(props) {
@@ -15,28 +15,23 @@ class Word extends React.Component {
   render () {
     let { words } = this.props;
 
-    if (this.props.words) {
-      words = words.map(word =>
-        <WordIndexItem
-          fetchWord={ this.props.fetchWord }
-          key={ word.id }
-          word={ word }
-          />
-      );
-    } else {
-      words = <Spinner />;
-    }
+    const wordsList = words ? words.map(word =>
+            <WordIndexItem
+              fetchWord={ this.props.fetchWord }
+              key={ word.id }
+              word={ word }
+            />) : <Spinner />;
 
     return(
       <div className='words'>
         <section className='words-index'>
           <h2>Complete List of Words</h2>
           <ul>
-            { words }
+            { wordsList }
           </ul>
         </section>
 
-        <Link to={ `/new` }>
+        <Link to={ `/new` } className='button'>
           Add a new word
         </Link>
       </div>

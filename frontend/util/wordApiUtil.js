@@ -3,7 +3,7 @@ import { ajax } from 'jquery';
 export const fetchWords = () => (
   ajax({
     method: 'GET',
-    url: 'api/word'
+    url: 'api/words'
   })
 );
 

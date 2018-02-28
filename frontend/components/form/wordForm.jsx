@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class WordForm extends React.Component {
+export class WordForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { content : '' };
@@ -18,10 +18,13 @@ class WordForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const word = this.state;
-    this.props.createWord({ word });
+    this.props.createWord({ word })
+      .then(this.props.history.push('/words'));
   }
 
   render() {
+    const disabled = this.state.content ? '' : 'true';
+
     return (
       <div>
         <form className='new-word' onSubmit={ this.handleSubmit }>
@@ -32,9 +35,15 @@ class WordForm extends React.Component {
             placeholder='Enter string here'
             className='string' />
 
-
+          <button
+            type='submit'
+            disabled={ disabled }
+            className='button'>
+            Submit
+          </button>
         </form>
-        <Link to={ `/words` }>
+
+        <Link to={ `/words` } className='button'>
           Click here to see complete list of strings
         </Link>
       </div>
