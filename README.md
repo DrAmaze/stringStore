@@ -28,6 +28,7 @@ This Single-Page, RESTful application has two UI: one to display the stored word
 
 
 * Loading spinner
+
 ![search](app/assets/images/spinner.png)
 
 
