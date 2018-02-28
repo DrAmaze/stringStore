@@ -10,7 +10,8 @@
 4. Ensure your local database is up and running. I used Postgres.
 5. Run `rails db:setup` in your terminal.
 6. Navigate to `localhost:3000/words` in your terminal.
-7. Enjoy creating new strings!
+7. To test, run `npm run test` in your terminal.
+8. Enjoy creating new strings!
 
 ## Overview
 
