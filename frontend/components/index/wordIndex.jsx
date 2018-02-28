@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import WordIndexItem from './wordIndexItem';
 import Spinner from '../loading/spinner';
 
-class Word extends React.Component {
+export class Word extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -40,4 +40,4 @@ class Word extends React.Component {
 
 }
 
-export default Word;
+export default withRouter(Word);

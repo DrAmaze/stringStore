@@ -19,8 +19,20 @@ describe('Word Form', () => {
   });
 
   it('Effectively links back to the index page', () => {
+    const preventDefault = function() {
+      wrapper.setState({ content: 'hi' });
+    };
     const spy = spyOn(wrapper.instance(), 'handleSubmit');
-    wrapper.find('form').simulate('submit');
+    wrapper.find('form').simulate('submit', { preventDefault });
     expect(spy).toHaveBeenCalled();
+  });
+
+  it('Fails to allow user to submit if they have not typed a character', () => {
+    const preventDefault = function() {
+      wrapper.setState({ content: '' });
+    };
+    const spy = spyOn(wrapper.instance(), 'handleSubmit');
+    wrapper.find('form').simulate('submit', { preventDefault });
+    expect(spy).not.toHaveBeenCalled();
   });
 });
