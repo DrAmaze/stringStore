@@ -1,4 +1,55 @@
-### String Store
+# String Store
+
+### The String Store is a basic application that records and displays all of the strings added to the database.
+
+## Overview
+
+This Single-Page, RESTful application has two UI: one to display the stored words, and another to add stored words to the list.
+
+## Features
+
+* User add strings to word index
+* User view all strings in the index
+* Loading spinner
+* Unit testing
+* User navigation between two pages
+* Intentional styling so as to highlight features and functionality
+
+![search](app/assets/images/index.png)
+
+## Technologies and Libraries
+
+* React Router
+Ensures UI is in sync with the URL.
+* Redux
+This framework defines how the frontend of the application communicates with the API served from the backend.
+* Redux Saga
+This middleware enables the application to make asynchronous calls easier to manage.
+* Jest/Enzyme
+Unit testing framework.
+* jQuery - AJAX
+Application leverages AJAX functionality to load data in the background without reloading the whole page.
+* Ruby on Rails
+The backend of this application is housed by Rails.
+* Postgres
+In development, this application utilizes Postgres as its database.
+
+## Technical Challenges
+
+* Unit test of form container
+    * In order to create the shallow copy needed for unit testing in jest/enzyme, the `WordForm` class needs to be exported as a function. This enables enzyme's `shallow()` function to create a wrapper that can be used in unit testing.
+* Implementing new libraries
+    * Redux Saga is a new library. Due to the fact that Saga manages a somewhat hard-to-envision data type, the `Promise`, Saga itself is hard conceptualize
+* Serving API as an array from backend
+    * In order to display the index of strings to the index page, I preferred the backend serve the list of `Word.content` as an array of strings. Manipulating jBuilder's `json.array!` functionality solved this problem.
+* Importing jQuery
+    * This library was deemed necessary as String Store's functionality is very basic; thus, it will not lose substantial UI/UX speed in the process.
+
+## Future
+
+- [ ] Full, end-to-end testing
+- [ ] Delete string functionality
+- [ ] Update index display
 
 ## Requirements
 Using React Boilerplate, create an application. (Expected to take 6-10 hours). Upon completion, respond to this email with a link to your GitHub fork of the React Boilerplate repo.
