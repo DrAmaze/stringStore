@@ -8,7 +8,7 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 describe('Word Form', () => {
-  const wrapper = shallow(<WordForm />);
+  let wrapper = shallow(<WordForm />);
 
   it('Should render', () => {
     expect(wrapper.find('form').length).toEqual(1);
@@ -18,12 +18,13 @@ describe('Word Form', () => {
     expect(wrapper.find('Link').length).toEqual(1);
   });
 
-  it('Effectively links back to the index page', () => {
+  it('Updates state with user input', () => {
     const preventDefault = function() {
       wrapper.setState({ content: 'hi' });
     };
-    const spy = spyOn(wrapper.instance(), 'handleSubmit');
-    wrapper.find('form').simulate('submit', { preventDefault });
+    const spy = spyOn(wrapper.instance(), 'update');
+
+    wrapper.find('input').simulate('change', { target : { preventDefault }});
     expect(spy).toHaveBeenCalled();
   });
 
@@ -32,7 +33,7 @@ describe('Word Form', () => {
       wrapper.setState({ content: '' });
     };
     const spy = spyOn(wrapper.instance(), 'handleSubmit');
-    wrapper.find('form').simulate('submit', { preventDefault });
+    wrapper.find('button').simulate('click', { preventDefault });
     expect(spy).not.toHaveBeenCalled();
   });
 });
