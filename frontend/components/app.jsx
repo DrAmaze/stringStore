@@ -10,6 +10,7 @@ import {
 import WordIndex from './index/wordIndexContainer';
 import WordForm from './form/wordFormContainer';
 
+// This function ensures the user is at the top of the page when navigating to another page
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
   return null;

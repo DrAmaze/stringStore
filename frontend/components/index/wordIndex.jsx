@@ -21,7 +21,7 @@ export class Word extends React.Component {
               key={ word.id }
               word={ word }
             />) : <Spinner />;
-
+          
     return(
       <div className='words'>
         <section className='words-index'>

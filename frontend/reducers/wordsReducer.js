@@ -15,6 +15,9 @@ const wordsReducer = (state = [], action) => {
       return action.words;
     case RECEIVE_WORD:
       return [...state, action.word];
+
+    // The following action enables user to delete words
+
     // case REMOVE_WORD:
     //   newState = merge({}, state);
     //   delete newState[action.booking.id];
