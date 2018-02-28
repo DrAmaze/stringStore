@@ -8,6 +8,7 @@ export class Word extends React.Component {
     super(props);
   }
 
+  // Lifecycle method to fetch index of words to display.
   componentDidMount() {
     this.props.fetchWords();
   }
@@ -15,13 +16,14 @@ export class Word extends React.Component {
   render () {
     let { words } = this.props;
 
+    // Handles loading vs. data logic on initial render
     const wordsList = words ? words.map(word =>
             <WordIndexItem
               fetchWord={ this.props.fetchWord }
               key={ word.id }
               word={ word }
             />) : <Spinner />;
-          
+
     return(
       <div className='words'>
         <section className='words-index'>

@@ -9,6 +9,7 @@ class Api::WordsController < ApplicationController
     end
   end
 
+  # Unnecessary as of now: there is no string show page
   def show
     @word = Word.find(params[:id])
   end
@@ -17,6 +18,7 @@ class Api::WordsController < ApplicationController
     @words = Word.all
   end
 
+  # Will be useful when adding delete functionality
   def destroy
     @word = Word.find(params[:id])
     @word.destroy
